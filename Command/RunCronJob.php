@@ -109,5 +109,7 @@ class RunCronJob extends Command
         $output->writeln('<comment>Total run time: '.$runTime.' seconds</comment>');
         $output->writeln('<comment>peak memory (real): '.memory_get_peak_usage(true).'bytes </comment>');
         $output->writeln('<comment>peak memory: '.memory_get_peak_usage().'bytes </comment>');
+        
+        return \Magento\Framework\Console\Cli::RETURN_SUCCESS;
     }
 }
